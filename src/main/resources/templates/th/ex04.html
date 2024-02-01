@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>순번</td>
+        <td>상품명</td>
+        <td>상품 설명</td>
+        <td>가격</td>
+        <td>상품 등록일</td>
+    </tr>
+    <!--변수명,-->
+    <tr th:each="itemDto,status:${itemDtoList} ">
+        <!--odd 홀수, even 짝수-->
+        <td th:switch="${status.even}">
+            <span th:case="true">짝수</span>
+            <span th:case="false">홀수</span>
+        </td>
+        <td th:text="${itemDto.itemNum}"></td>
+        <td th:text="${itemDto.itemDetail}"></td>
+        <td th:text="${itemDto.price}"></td>
+        <td th:text="${itemDto.regTime}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

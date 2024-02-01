@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Thymeleaf</h3>
+    <a th:href="@{/thymeleaf/ex01}">ex01.html</a><br>
+    <a th:href="@{'https://www.thymeleaf.org/'}"> Thymeleaf.org 페이지</a><br>
+    <!-- 주소창 확인 -->
+    <a th:href="@{/thymeleaf/ex06(param1='파라미터1',param2='파라미터2')}"> Thymeleaf parameter a,b 전달</a>
+
+
+
+</body>
+</html>
